@@ -1,0 +1,277 @@
+body{
+  width: 100%;
+  margin: 0px;
+}
+h1{
+  font-family: 'calibri', sans-serif;
+  font-weight: lighter;
+  font-size: 32pt;
+}
+h2{
+  font-family: 'calibri', sans-serif;
+  font-weight: lighter;
+  font-size: 24pt;
+}
+h3{
+  font-family: 'calibri', sans-serif;
+  font-weight: lighter;
+}
+h4{
+  font-family: 'calibri', sans-serif;
+}
+h5{
+  font-family: 'calibri', sans-serif;
+}
+h6{
+  font-family: 'calibri', sans-serif;
+}
+p{
+  font-family: 'calibri', sans-serif;
+}
+label{
+  font-family: 'calibri', sans-serif;
+}
+a{
+  font-family: 'calibri', sans-serif;
+  text-decoration: none;
+}
+button{
+  background: none;
+  outline:none;
+  border: none;
+  font-family: 'calibri', sans-serif;
+}
+#app_home_left_section{
+  width: 70%;
+  height: 100%;
+  float: left;
+  display: inline-block;
+  background-color: rgb(3, 123, 252);
+}
+#app_home_right_section{
+  width: 30%;
+  height: 100%;
+  float: right;
+  display: inline-block;
+}
+#app_home_left_h1{
+  margin-top: 31vh;
+  color: #ffffff;
+  padding: 45px;
+}
+.formholder{
+  padding: 10px;
+  width: calc(100% - 40px);
+  border: 1px solid #a6a6a6;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+#loginform{
+  margin-left: 10px;
+  margin-top: 32vh;
+  height: 220px;
+}
+#signupform{
+  margin-left: 10px;
+  margin-top: 27vh;
+  height: auto;
+}
+#resetpwdform{
+  margin-left: 10px;
+  margin-top: 32vh;
+  height: auto;
+}
+.app_form_label{
+  font-size: 22pt;
+  font-weight: lighter;
+}
+.form_text_input_field{
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  border: 1px solid #c9c9c9;
+  padding-left: 10px;
+  border-radius: 2px;
+}
+#app_login_button_id{
+  font-size: 14pt;
+  margin-top: 20px;
+  background-color: rgb(252, 119, 3);
+  color: #ffffff;
+  padding: 10px;
+  width: 100%;
+  border-radius: 3px;
+}
+
+/* App Main Elements*/
+.app_header_ul{
+  list-style: none;
+  margin: 0px;
+}
+.app_header_li{
+  display: inline-block;
+  margin-top: 0px;
+}
+header{
+  width: 100vw;
+  margin: 0px;
+  height: 40px;
+  position: fixed;
+  top: 0px;
+  background-color:#00aac4;
+  z-index: 100;
+}
+.app_header_drawer_button{
+  width: 50px;
+  height: 40px;
+  padding-left: 12.5px;
+  padding-top: -5px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.app_header_drawer_button:hover{
+  background: #0f8496;
+}
+.app_header_drawer_line{
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 5px;
+}
+.app_header_text{
+  font-size: 18pt;
+  position: absolute;
+  top: -12px;
+  right: 25px;
+  color: #fff;
+}
+/* App Sidebar */
+#app_sidebar{
+  display: none;
+  position: fixed;
+  left: 0px;
+  top: 40px;
+  width: 300px;
+  height: 100%;
+  background: #00aac4;
+  z-index: 100;
+}
+#app_sidebar_hr{
+  width: calc(100% + 30px); height: 1px; background: #fff; margin-left: -34px; margin-top: 50px;
+}
+.app_sidebar_ul{
+  list-style: none;
+}
+.app_sidebar_li{
+  width: calc(100% + 15px);
+  color: #fff;
+  margin-left: -40px;
+  height: 25px;
+  padding: 5px;
+  padding-left: 20px;
+  font-size: 14pt;
+  font-family: 'calibri' sans-serif;
+}
+.app_sidebar_li:hover{
+  background: #0f8496;
+}
+.app_sidebar_welcome_text{
+  font-size: 18pt; margin-left: -25px; color: #fff;
+}
+.app_sidebar_search_form{
+  height: calc(100vh - 305px); position: relative;
+}
+#app_sidebar_search_field{
+  display: inline-block; height: 30px; border: none; border-radius: 3px; padding-left: 10px; position: absolute; width: 250px; margin-left: -30px;
+}
+#app_sidebar_search_button{
+  display: inline-block; position: absolute; right: 6px; top: 1px; background-color: #fff;
+}
+/* App Main Section */
+#app_main{
+  display: block;
+  margin-left: 0px;
+  margin-top: 40px;
+  width: calc(100% - 20px);
+  height: 100%;
+  padding: 10px 10px 10px;
+}
+.app_main_section{
+  max-width: 1115px;
+  margin-top: -20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.app_notesicon_holder{
+  position: relative;
+}
+.app_notesicon_img{
+
+}
+.app_notesicon_name{
+  position: absolute;
+  z-index: 1;
+  width: 180px;
+  left: 10px;
+  top: 20px;
+}
+.app_notesicon_text{
+  font-size: 14pt;
+}
+#app_notesicon1_text{
+  font-size: 120pt;
+  margin-top: -20px;
+  margin-left: 50px;
+}
+.app_notesicon_ul{
+  list-style: none;
+}
+.app_notesicon_li{
+  display: inline-block;
+  margin: 20px;
+  margin-left: -10px;
+}
+
+/* NotesApp */
+.app_notesapp_input_heading{
+  width: 98%; font-size: 16pt; margin-left: 0.25%; border: 2px dashed rgb(120,120,120); border-radius: 3px; font-size: 16pt; padding: 5px;
+}
+.app_notepad_notearea{
+  width: 98%; margin-left: 0.25%; margin-top: 15px; height: 65vh; resize: none; border: 2px dashed rgb(120,120,120); border-radius: 10px; padding: 20px; font-size: 14pt;
+}
+.app_notesapp_datetimebuttons_ul{
+  list-style: none;
+}
+#app_notesapp_datetimebuttons_li1{
+  display: inline-block; float: left; margin-top: -10px; margin-left: 0px;
+}
+#app_notesapp_datetimebuttons_li2{
+  display: inline-block; float: right; margin-right: 10px;
+}
+#app_notesapp_discard_button{
+  background: #a83232; padding: 7px; padding-left: 30px; padding-right: 30px;font-size: 12pt; color: #fff; border-radius: 3px;
+}
+#app_notesapp_save_button{
+  background: #32a852; padding: 7px; padding-left: 30px; padding-right: 30px;font-size: 12pt; color: #fff; border-radius: 3px;
+}
+
+/* Settings */
+.app_settings_text_input{
+  width: calc(100% - 35px);
+  height: 25px;
+  border-radius: 3px;
+  border: 1px solid rgb(150,150,150);
+  padding-left: 10px;
+}
+.app_settings_submit_button{
+  background: #32a852; padding: 7px; padding-left: 30px; padding-right: 30px;font-size: 12pt; color: #fff; border-radius: 3px; width: calc(100% - 20px);
+}
+.app_settings_form_holder{
+  width: 400px; margin-top: calc(50vh - 225px); border: 1px solid #acacac; border-radius: 4px; margin-left: auto; margin-right: auto; padding-left: 25px;
+}
+#app_settings_form_headlabel{
+  font-size: 24pt; font-family: 'calibri' sans-serif; font-weight: lighter; color: #94b6ff;
+}

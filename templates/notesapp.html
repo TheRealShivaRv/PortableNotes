@@ -1,0 +1,25 @@
+{% include 'base.html' %}
+{% load static %}
+{% block content %}
+    {% include 'partials/_header.html' %}
+    <article id="app_main">
+      <section class="app_main_section" style="margin-top: 10px;">
+        {% include 'partials/_messages.html' %}
+        <form action="{% url 'notes' %}" method="POST">
+          {% csrf_token %}
+          <input name="title" value="{{title}}" class="app_notesapp_input_heading" type="text"/>
+          <textarea name="note" class="app_notepad_notearea">{{text}}</textarea>
+          <ul class="app_notesapp_datetimebuttons_ul">
+            <li id="app_notesapp_datetimebuttons_li1">
+              <div>
+                <p>{{datetimestamp}}</p>
+              </div>
+            </li>
+            <li id="app_notesapp_datetimebuttons_li2">
+              <button type="submit" id="app_notesapp_save_button">Save</button>
+            </li>
+          </ul>
+        </form>
+      </section>
+    </article>
+{% endblock %}

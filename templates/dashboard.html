@@ -1,0 +1,190 @@
+{% include 'base.html' %}
+{% load static %}
+{% block content %}
+    {% include 'partials/_header.html' %}
+    <article id="app_main">      
+      <section class="app_main_section">
+        {% include 'partials/_messages.html' %}
+        <ul class="app_notesicon_ul">
+          <a href="{% url 'notes' %}" style="color: #000;"><li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p id="app_notesicon1_text">+</p>
+              </div>
+            </div>
+          </li></a>
+          {% for notetitle in notetitles %}
+          <a href="{% url 'noteviewer' title=notetitle %}"><li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">{{notetitle}}</p>
+              </div>
+            </div>
+          </li></a>
+          {% endfor %}
+          <!--<li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>
+          <li class="app_notesicon_li">
+            <div class="app_notesicon_holder">
+              <img class="app_notesicon_img" src="{% static 'img/notes-icon.png' %}" height="220" width="200"/>
+              <div class="app_notesicon_name">
+                <p class="app_notesicon_text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div>
+            </div>
+          </li>-->
+        </ul>
+      </section>
+    </article>
+{% endblock %}

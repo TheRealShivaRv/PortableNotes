@@ -1,0 +1,37 @@
+{% include 'base.html' %}
+{% load static %}
+{% block content %}
+    {% include 'partials/_header.html' %}
+    <article id="app_main">
+      <section class="app_main_section" style="margin-top: 10px;">
+        {% include 'partials/_messages.html' %}
+        <div class="app_settings_form_holder">
+          <form style="margin-left: auto; margin-right: auto;" action="{% url 'settings' %}" method="POST">
+            {% csrf_token %}
+            <div style="height: 15px"></div>
+            <label id="app_settings_form_headlabel">Settings</label><br/>
+            <div style="height: 15px"></div>
+            <label>Email id:-</label><br/>
+            <input class="app_settings_text_input" name="currentemail" type="email" value="{{request.user.email}}" placeholder="Enter your new email" required/><br/>
+            <div style="height: 15px"></div>
+            <label>Userame:-</label><br/>
+            <input class="app_settings_text_input" type="text" name="currentusername" value="{{request.user.username}}" placeholder="Update your username" required/><br/>
+            <div style="height: 15px"></div>
+            <label>Password:-</label><br/>
+            <input class="app_settings_text_input" type="password" name="currentpassword" placeholder="Enter new password" required/><br/>
+            <div style="height: 15px"></div>
+            <label>Confirm Password:-</label><br/>
+            <input class="app_settings_text_input" type="password" name="confirmpassword" placeholder="Retype your new password" required/><br/>
+            <div style="height: 15px"></div>
+            <button class="app_settings_submit_button" type="submit">Update</button>
+            <div style="height: 15px"></div>
+        </form>
+        <center><form action="{% url 'deleteuser' %}" method="POST">
+          {% csrf_token %}
+          <input type="hidden" name="username" value="{{request.user.username}}"/>
+          <button type="submit">Delete Your Account</button>
+        </form></center>
+        </div>
+      </section>
+    </article>
+{% endblock %}

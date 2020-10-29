@@ -1,0 +1,46 @@
+<!--header starts-->
+{% load static %}
+<header>
+  <ul class="app_header_ul">
+    <li class="app_header_li">
+      <button class="app_header_drawer_button"  id="app_header_drawer_button">
+        <div class="app_header_drawer_line" style="margin-top: 2px;"></div>
+        <div class="app_header_drawer_line"></div>
+        <div class="app_header_drawer_line"></div>
+      </button>
+    </li>
+    <a href="{% url 'dashboard' %}"><li class="app_header_li"><h1 class="app_header_text">PortableNotes</h1></li></a>
+  </ul>
+</header>
+<aside id="app_sidebar">
+  <ul class="app_sidebar_ul">
+    <li>
+      <h1 style="font-size: 18pt; margin-left: -25px; color: #fff;">Hi, {{request.user.username}}</h1>
+    </li>
+    <li>
+      <form action="{% url 'search' %}" method="POST" style="height: calc(100vh - 305px); position: relative;">
+        {% csrf_token %}
+        <input name="searchinput" type="search" id="app_sidebar_search_field" placeholder="Search Notes"/>
+        <button type="submit" style="border-radius: 4px; height:30px; margin-top: -1px;" id="app_sidebar_search_button"><img style="background: #fff; margin-top: 0px;" src="{% static 'img/search.png' %}" height="28" width="28"/></button>
+      </form>
+    </li>
+    <li><div id="app_sidebar_hr"></div></li>
+    <a href="{% url 'dashboard' %}"><li class="app_sidebar_li">Dashboard</li></a>
+    <a href="{% url 'notes' %}"><li class="app_sidebar_li">Create a Note</li></a>
+    <a href="{% url 'settings' %}"><li class="app_sidebar_li">User Settings</li></a>
+    <a href="{% url 'logoutapp' %}"><li class="app_sidebar_li">Logout</li></a>
+  </ul>
+</aside>
+<script type="application/javascript">
+  var app_drawer_button = document.getElementById("app_header_drawer_button");
+  var app_sidebar = document.getElementById("app_sidebar");
+  app_drawer_button.addEventListener("click", SidebarDisplayToggle);
+  function SidebarDisplayToggle(){
+    if(app_sidebar.style.display == "block"){
+      app_sidebar.style.display = "none";
+    } else {
+        app_sidebar.style.display = "block";
+    }
+  }
+</script>
+<!--header ends-->
